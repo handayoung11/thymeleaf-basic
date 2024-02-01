@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>LocalDateTime</h1>
+<ul>
+    <li>
+        default =
+        <span th:text="${now}"></span>
+    </li>
+    <li>
+        yyyy-MM-dd HH:mm:ss =
+        <span th:text="${#temporals.format(now,'yyyy-MM-dd HH:mm:ss')}"></span>
+    </li>
+</ul>
+<h1>LocalDateTime - Utils</h1>
+<ul>
+    <li>
+        ${#temporals.day(now)} =
+        <span th:text="${#temporals.day(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.month(now)} =
+        <span th:text="${#temporals.month(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.monthName(now)} =
+        <span th:text="${#temporals.monthName(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.monthNameShort(now)} =
+        <span th:text="${#temporals.monthNameShort(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.year(now)} =
+        <span th:text="${#temporals.year(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.dayOfWeek(now)} =
+        <span th:text="${#temporals.dayOfWeek(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.dayOfWeekName(now)} =
+        <span th:text="${#temporals.dayOfWeekName(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.dayOfWeekNameShort(now)} =
+        <span th:text="${#temporals.dayOfWeekNameShort(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.hour(now)} =
+        <span th:text="${#temporals.hour(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.minute(now)} =
+        <span th:text="${#temporals.minute(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.second(now)} =
+        <span th:text="${#temporals.second(now)}"></span>
+    </li>
+    <li>
+        ${#temporals.nanosecond(now)} =
+        <span th:text="${#temporals.nanosecond(now)}"></span>
+    </li>
+</ul>
+</body>
+</html>
