@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>기본 테이블</h1>
+<table border="1">
+    <tr>
+        <th>username</th>
+        <th>age</th>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}">username</td>
+        <td th:text="${user.age}">20</td>
+    </tr>
+</table>
+<h1>반복 상태 유지</h1>
+<table border="1">
+    <tr>
+        <th>count</th>
+        <th>username</th>
+        <th>age</th>
+        <th>etc</th>
+    </tr>
+    <tr th:each="u, uStat : ${users}">
+        <td th:text="${uStat.count}">count</td>
+        <td th:text="${u.name}">username</td>
+        <td th:text="${u.age}">0</td>
+        <td>
+            index = <span th:text="${uStat.index}"></span>
+            count = <span th:text="${uStat.count}"></span>
+            size = <span th:text="${uStat.size}"></span>
+            even? = <span th:text="${uStat.even}"></span>
+            odd? = <span th:text="${uStat.odd}"></span>
+            first? = <span th:text="${uStat.first}"></span>
+            last? = <span th:text="${uStat.last}"></span>
+            current = <span th:text="${uStat.current}"></span>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
